@@ -3,6 +3,10 @@ body{
     width: 100%;
 }
 
+.container{
+    position: relative;
+}
+
 a{
     text-decoration: none;
     color: white;
@@ -42,6 +46,7 @@ header{
      justify-content: space-between; 
      padding-top: 5px;
      margin-right: 5px;
+     position: relative;
 }
 
 .menu i{
@@ -64,10 +69,9 @@ header{
 }
 
 .mbox:hover{
-    background-color: rgba(34, 139, 34, 0.5);
+    background-color: rgba(34, 139, 34);
     border-radius: 20px;
     color: white;
-    text;
 }
 
 .title{
@@ -139,9 +143,79 @@ nav{
 }
 
 main{
-    border: 5px solid green;
+    border-top: 5px solid green;
     border-radius: 30px;
     min-height: 200px;
+    padding-top: 10px;
+}
+
+.itemcontainer{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.item{
+    background-color: white;
+    width: 20%;
+    height: 100;
+    display: flex;
+    justify-content: center;
+    color: forestgreen;
+    font-weight: bolder;
+    text-align: center;
+    border: 3px solid green;
+    border-radius: 30px;
+    padding: 10px;
+    background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.4), rgb(154, 205, 50, 0.9));
+    flex-wrap: wrap;
+    margin-bottom: 25px;
+}
+
+tr{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+table{
+    display: flex;
+    justify-content: center;
+    width: 200px;
+}
+
+input[type="submit"]{
+    border: 0;
+    color: white;
+    background-color: rgb(39, 159, 39);
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+input[type="submit"]:hover{
+    background-color: rgb(130, 173, 45);
+}
+
+.cartcontainer{
+    background-color: yellow;
+    min-width: 50%;
+    min-height: 50%; 
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    display: none;
+}
+
+.cartspacing{
+    display: flex;
+    align-content: center;
+}
+
+#cartcontainer:target{
+    display: block;   
 }
 
 /* tablet view */
@@ -150,6 +224,10 @@ main{
     nav{
         width: 100%;
         gap: 5%;
+    }
+
+    .item{
+        width: 25%;
     }
 }
 
@@ -161,4 +239,7 @@ main{
         gap: 5%;
     } 
 
+    .item{
+        width: 75%;
+    }
 }

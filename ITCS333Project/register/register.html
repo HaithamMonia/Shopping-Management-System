@@ -9,33 +9,35 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 <body>
-    <img src="bg.jpeg" alt="background">
+    <img src="limebg.jpeg" alt="background">
     <div class="container">
         
-        <header><img src="nameV2.png" alt="name"></header>
+        <header><h1>Souq<span>BH</span></h1></header>
         <main>
             <h1>Register</h1>
             
             <div class="main-subcontainer">
-                <form action="../main/index.html"  method="GET">
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" placeholder="Your name" required>
-                    <br><br>
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" placeholder="Your E-mail" required>
-                    <br><br>
-                    <label for="password">Password:</label>
-                    <input type="password" id="password" name="password" placeholder="Password" required>
-                    <br><br>
-                    <label for="confirm_password">Confirm Password:</label><br>
-                    <input type="password" id="confirm_password" name="confirm_password" placeholder="Confirm your password" required>
-                    <br><br>
-                    <button type="submit" name="submit">Sign up</button>
-                </form>
-            
+            <form action="">
+                <label for="text"> <i class="fa-regular fa-user"></i> </label> &nbsp;
+                <input type="text" name="text" placeholder="Your name">
+                <br><br>
+                <label for="email"> <i class="fa-regular fa-envelope"></i></label> &nbsp;
+                <input type="email" name="email" placeholder="Your E-mail">
+                <br><br>
+                <label for="password"><i class="fa-solid fa-lock"></i></label> &nbsp;
+                <input type="password" name="password" placeholder="Password">
+                <br><br>
+                <label for="password"><i class="fa-solid fa-key"></i></label> &nbsp;
+                <input type="password" name="password" placeholder="Confirm your password">
+                <br><br>
+               
+            </form>
+            <button name="submit" id="submit">Sign up</button>
            
             </div>
-            
+            <p>Already have an account?  <a href="Login.html">Sign in</a></p>
+
+           
           
         </main>
 
