@@ -21,7 +21,6 @@ main{
     padding: 10px;
     margin: auto;
     width: 350px;
-    height: 280px;
     border-radius: 50px;
     text-align: center;
     background-color: white;
@@ -94,3 +93,7 @@ span{
     color: rgb(223, 26, 26);
     text-decoration: underline;
 }
+
+
+
+
