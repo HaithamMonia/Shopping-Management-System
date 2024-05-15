@@ -79,6 +79,8 @@ header{
     font-size: x-large;
     font-family:cursive;
     text-decoration: underline;
+    margin-top: 50px;
+    font-size: 30px;
 }
 
 span{
@@ -87,7 +89,7 @@ span{
 }
 
 input[type=search] {
-    margin-top: 10px;
+    margin-top: 30px;
     width: 450px;
     height: 25px;
     border: none;
@@ -242,4 +244,9 @@ input[type="submit"]:hover{
     .item{
         width: 75%;
     }
+
+    input[type=search]{
+        width: 225px;
+    }   
+
 }
