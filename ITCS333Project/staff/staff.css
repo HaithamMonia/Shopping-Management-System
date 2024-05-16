@@ -196,6 +196,24 @@ input[type="submit"]{
     width: 70px;
 }
 
+.editbtn p{
+    border: 0;
+    text-align: center;
+    margin: auto;
+    color: white;
+    background-color: rgb(39, 159, 39);
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 5px;
+    border-radius: 10px;
+    width: 70px;
+    font-size: 0.85rem;
+    font-weight: lighter;
+}
+
+.editbtn p:hover{
+    background-color: rgb(130, 173, 45);
+}
+
 input[type="submit"]:hover{
     background-color: rgb(130, 173, 45);
 }
