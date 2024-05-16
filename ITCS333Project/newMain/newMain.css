@@ -199,27 +199,6 @@ input[type="submit"]:hover{
     background-color: rgb(130, 173, 45);
 }
 
-.cartcontainer{
-    background-color: yellow;
-    min-width: 50%;
-    min-height: 50%; 
-    position: absolute;
-    z-index: 1;
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    display: none;
-}
-
-.cartspacing{
-    display: flex;
-    align-content: center;
-}
-
-#cartcontainer:target{
-    display: block;   
-}
-
 /* tablet view */
 @media(max-width: 768px){
 
