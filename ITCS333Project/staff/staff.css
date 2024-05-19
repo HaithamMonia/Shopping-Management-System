@@ -1,0 +1,478 @@
+body{
+    margin: 0;
+    width: 100%;
+}
+
+/*Staff View Items CSS*/
+.container{
+    position: relative;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.1rem;
+}
+
+.header-container{
+   min-height: 250px;
+   display: flex;
+   justify-content: center;
+   position: relative;
+}
+
+.img{
+    min-height: 280px;
+    background-image: url(images/limebg.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    position: absolute;
+}
+
+header{
+    text-align: center;
+    height: 280px;
+    width: 100%;
+    position: relative;
+    background: linear-gradient(rgb(154, 205, 50, 0.9), rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0));
+    background-size: cover;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.menu{
+     display: flex;
+     justify-content: flex-end; 
+     padding-top: 5px;
+     margin-right: 5px;
+     position: relative;
+}
+
+.menu i{
+    font-size: 1.1rem;
+    color: white;
+}
+
+.mbox{
+    display: inline-block;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.status{
+    font-size: 1.1rem;
+    color: white;
+    display: inline-block;
+    padding: 10px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.mbox:hover{
+    background-color: rgba(34, 139, 34);
+    border-radius: 20px;
+    color: white;
+}
+
+.title{
+    color: white;
+    font-size: x-large;
+    font-family:cursive;
+    text-decoration: underline;
+    margin-top: 50px;
+    font-size: 30px;
+}
+
+span{
+    color: rgb(223, 26, 26);
+    text-decoration: underline;
+}
+
+input[type=search]{
+    margin-top: 30px;
+    width: 450px;
+    height: 25px;
+    border: none;
+    border-radius: 25px;
+    padding-left: 10px;
+    box-shadow: 0 0 10px;
+}
+
+input[type=search]:focus{
+    outline: none;
+}
+
+i{
+    font-size: 1rem;
+    color: black;
+    padding: 2px;
+}
+
+nav{
+    min-height: 150px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    overflow-x: auto;
+    position: relative;
+    width: 100%;
+}
+
+.categorybox{
+    text-align: center;
+    background-color: rgb(39, 159, 39);
+    box-sizing: border-box;
+    height: 100px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 10px;
+}
+
+.categorybox:hover{
+    background-color: yellowgreen;
+}
+
+.categorybox i{
+    font-size: 1.5rem;
+    margin-top: 20px;
+    color: white;
+}
+
+.categorytext{
+    width: 80px;
+    margin-top: 20px;
+}
+
+main{
+    border-top: 5px solid green;
+    border-radius: 30px;
+    min-height: 200px;
+    padding-top: 10px;
+}
+
+.itemcontainer{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.item{
+    background-color: white;
+    width: 20%;
+    height: 100;
+    display: flex;
+    justify-content: center;
+    color: forestgreen;
+    font-weight: bolder;
+    text-align: center;
+    border: 3px solid green;
+    border-radius: 30px;
+    padding: 10px;
+    background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.4), rgb(154, 205, 50, 0.9));
+    flex-wrap: wrap;
+    margin-bottom: 25px;
+}
+
+tr{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+table{
+    display: flex;
+    justify-content: center;
+    width: 200px;
+}
+
+input[type="submit"]{
+    border: 0;
+    color: white;
+    background-color: rgb(39, 159, 39);
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 5px;
+    border-radius: 10px;
+    width: 70px;
+}
+
+.editbtn p{
+    border: 0;
+    text-align: center;
+    margin: auto;
+    color: white;
+    background-color: rgb(39, 159, 39);
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 5px;
+    border-radius: 10px;
+    width: 70px;
+    font-size: 0.85rem;
+    font-weight: lighter;
+}
+
+.editbtn p:hover{
+    background-color: rgb(130, 173, 45);
+}
+
+input[type="submit"]:hover{
+    background-color: rgb(130, 173, 45);
+}
+
+
+/* Staff Main CSS */
+.menuMain{
+    display: flex;
+    justify-content: space-between; 
+    padding-top: 5px;
+    margin-right: 5px;
+    position: relative;
+}
+
+.menuMain i{
+    font-size: 1.1rem;
+    color: white;
+}
+
+.main2{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 30px;
+    flex-wrap: wrap;
+    border-top: 5px solid forestgreen;
+}
+
+.mainbox{
+    height: 300px;
+    width: 45%;
+    border: 2px solid green;
+    border-radius: 35px;
+    padding: 10px;
+    background: linear-gradient(rgb(154, 205, 50, 0.9), rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0));
+}
+
+.box1Title p{
+    color: white;
+    font-size: x-large;
+    padding: 10px;
+    font-weight: 520;
+    text-decoration: underline;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.box1table{
+    padding-left: 170px;
+}
+
+.box1qty{
+    display: flex;
+    align-items: center;
+}
+  
+.space{
+    display: inline-block;
+    min-width: 65px;
+}
+
+.addbutton{
+    padding-top: 15px;
+    padding-left: 50px;
+}
+
+.box1table{
+    width: auto;
+    border-top: 2px solid forestgreen;
+    border-bottom: 2px solid forestgreen;
+    border-radius: 20%;
+
+}
+
+.tr2{
+    width: auto;
+    padding: 10px;
+}
+
+.box2Title{
+    color: white;
+    font-size: x-large;
+    padding: 10px;
+    font-weight: 520;
+    text-decoration: underline;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.infobox2{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    border-top: 2px solid forestgreen;
+    border-radius: 30px;
+    padding: 10px;
+    overflow-y: auto;
+    height: 220px;
+}
+
+.subbox2{
+    border: 1px solid forestgreen;
+    border-radius: 20px;
+    padding: 10px;
+    width: 45%;
+    height: 100px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+input[type=button]{
+    margin-top: 3px;
+    border: 0;
+    color: white;
+    background-color: rgb(39, 159, 39);
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 5px;
+    border-radius: 10px;
+    width: auto;
+}
+
+input[type=button]:hover{
+    background-color: rgb(130, 173, 45);
+}
+  
+/* Staff Edit Item CSS */
+.editbg{
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    position: absolute;
+    z-index: -1;
+    opacity: 0.68;
+}
+
+.editheader{
+    height: auto;    
+}
+
+.editMain{
+    margin: auto;
+    width: 90%;
+    height: 400px;
+    background: linear-gradient(rgb(154, 205, 50, 0.9), rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0));
+    background-color: white;
+    margin-top: -70px;
+    border-radius: 30px;
+}
+
+.editMain p{
+    padding: 15px 15px 0 15px;
+    font-size: x-large;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;;
+    color: white;
+    font-weight: 520;
+    text-decoration: underline;
+}
+
+.eboxcontainer{
+    display: flex;
+    justify-content: center;
+    border: 2px solid forestgreen;
+    margin: 10px;
+    border-radius: 20px;
+}
+
+.editbox{
+    height: 300px;
+    width: 45%;
+}
+
+.ebox1{
+    border-right: 2px solid forestgreen;
+    border-radius: 20px;
+    background: linear-gradient(rgb(154, 205, 50, 0.9), rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0));
+    width: 100%;
+}
+
+.ebox2{
+    border-left: 2px solid forestgreen;
+    border-radius: 20px;
+    background: linear-gradient(rgb(154, 205, 50, 0.9), rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0));
+    width: 100%;
+}
+
+.tr3{
+    margin: 20px;
+}
+
+.tr4{
+    margin: 20px;
+}
+
+.updatebutton{
+    text-align: center;
+}
+
+.updatebutton input[type=submit]{
+    width: 100px;
+}
+
+/* tablet view */
+@media(max-width: 768px){
+
+    html{
+        overflow-x: hidden;
+        width: 100%;
+       
+    }
+    
+    nav{
+        width: 100%;
+        gap: 5%;
+    }
+
+    .item{
+        width: 25%;
+    }
+
+    .mainbox{
+        width: 75%;
+        margin-bottom: 30px;
+    }
+
+}
+
+/* mobile view */
+@media(max-width: 500px){
+
+    html{
+        overflow-x: hidden;
+        width: 100%;
+        height: 100%;
+    }
+
+    body{
+        overflow-x: hidden;
+        width: 100%;
+    }
+    
+    nav{
+        width: 100%;
+        gap: 5%;
+    } 
+
+    .item{
+        width: 75%;
+    }
+
+    input[type=search]{
+        width: 225px;
+    }
+    
+    .mainbox{
+        width: 75%;
+    }
+
+   .tr4{
+    padding-right: 60px;
+   }
+  
+}
+
