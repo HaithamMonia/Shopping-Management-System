@@ -63,7 +63,7 @@ if (isset($_POST['submit'])) {
 </head>
 
 <body>
-    <img src="limebg.jpeg" alt="background">
+    <img src="../../Design/limebg.jpeg" alt="background">
     <div class="container">
 
         <header>

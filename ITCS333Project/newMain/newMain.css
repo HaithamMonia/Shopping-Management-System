@@ -23,7 +23,7 @@ a{
 
 .img{
     min-height: 280px;
-    background-image: url(images/limebg.jpeg);
+    background-image: url(../../Design/limebg.jpeg);
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;

@@ -3,32 +3,53 @@ html{
     width: 100%;
     overflow: hidden;
 }
-body{
-    margin: 0;
-    width: 100%;
-    height: 100%;
-}
-header{
-    min-height: 200px;
-    background: linear-gradient(rgb(154, 205, 50, 0.9), rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0));
+
+.header-container{
+    min-height: 250px;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
 }
+
+header{
+    text-align: center;
+    height: 250px;
+    width: 100%;
+    position: relative;
+    background: linear-gradient(rgb(154, 205, 50, 0.9), rgba(255, 255, 255, 0));
+    background-size: cover;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 nav{
     display: flex;
 }
 
-.mbox{
-    height: 23px;
-    display: inline-block;
-    justify-content: space-between;
-    padding: 10px;
+.menu{
+    display: flex;
+    justify-content: flex-end; 
+    padding-top: 5px;
+    margin-right: 10px;
+    position: relative;
 }
+
+.menu i{
+   font-size: 1.1rem;
+   color: white;
+}
+
+.mbox{
+   display: inline-block;
+   justify-content: space-between;
+   padding: 10px;
+}
+
 .mbox:hover{
     background-color: rgba(34, 139, 34);
     border-radius: 20px;
     color: white;
 }
+
 a{
     
     display: inline-block;
@@ -37,24 +58,26 @@ a{
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 1.1rem;
 }
+
 .title{
-padding-left: 140px;
-    padding-top: 120px;
-    width: 100%;
-    text-align: center;
-    font-family:cursive;
+    color: white;
     font-size: x-large;
-    text-align: center;
-    
-}
-span{
+    font-family:cursive;
     text-decoration: underline;
-    color: red;
+    margin-top: 50px;
+    font-size: 30px;
 }
+
+span{
+    color: rgb(223, 26, 26);
+    text-decoration: underline;
+}
+
 h1{
     text-decoration: underline;
     color:white ;
 }
+
 body img{
     height: 100%;
     width: 100%;
@@ -62,16 +85,18 @@ body img{
     z-index: -1;
     opacity: 0.68;
 }
+
 main{
-    border-radius: 30px;
-    min-height: 500px;
     margin: auto;
     width: 90%;
-    background: linear-gradient(rgb(154, 205, 50, 0.9), rgb(255, 255, 255), rgba(255, 255, 255, 0));
-    background-color: white;
-    z-index: 1;
-    margin-top: 100px;
+    min-height: 400px;
+    background: linear-gradient(rgb(154, 205, 50, 0.9), rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0));
+    background-color: green;
+    margin-top: -70px;
+    border-radius: 30px;
+    border: 2px solid rgb(0, 128, 0);
 }
+
  .mainp{
     padding: 15px;
     text-decoration: underline;
@@ -81,6 +106,7 @@ main{
     color: white;
     padding-left: 20px;
 }
+
 .cards{
     width: 90%;
     margin: auto;   
@@ -91,11 +117,8 @@ main{
 
 
 .leftCard{
-
-
-background: linear-gradient(rgb(154, 205, 50, 0.9), rgb(255, 255, 255), rgba(255, 255, 255, 0));
-background-color: white;
-    border: 3px solid forestgreen;
+    background: linear-gradient(rgb(154, 205, 50, 0.9), rgb(255, 255, 255), rgba(255, 255, 255, 0));
+    background-color: white;
     border-radius: 30px;
     height: 200px;
     width: 40%;
@@ -111,7 +134,6 @@ background-color: white;
 .rightCard{
     background: linear-gradient(rgb(154, 205, 50, 0.9), rgb(255, 255, 255), rgba(255, 255, 255, 0));
     background-color: white;
-    border: 3px solid forestgreen;
     border-radius: 30px;
     height: 200px;
     width: 40%;

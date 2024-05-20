@@ -9,21 +9,21 @@ body{
 
 a{
     text-decoration: none;
-    color: rgb(255, 255, 255);
+    color: white;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 1.1rem;
 }
 
 .header-container{
-   min-height: 200px;
+   min-height: 250px;
    display: flex;
    justify-content: center;
    position: relative;
 }
 
 .img{
-    min-height: 200px;
-    background-image: url(limebg.jpeg);
+    min-height: 280px;
+    background-image: url(../../../Design/limebg.jpeg);
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
@@ -32,7 +32,7 @@ a{
 
 header{
     text-align: center;
-    min-height: 200px;
+    min-height: 280px;
     width: 100%;
     position: relative;
     background: linear-gradient(rgb(154, 205, 50, 0.9), rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0));
@@ -40,52 +40,7 @@ header{
     margin-left: auto;
     margin-right: auto;
 }
-main{
-    display: flex;
-    justify-content: space-between;
-    text-align: center;
-    min-height: 200px;
-    width: 100%;
-    position: relative;
-    background-color: white;
-    background: linear-gradient(rgb(154, 205, 50, 0.9), rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0));
-    background-size: cover;
-    margin-left: auto;
-    margin-right: auto;
- 
-   
-   
-}
-.prof{
-    font-size: 1.1rem;
-    color: white;
-  
-    padding: 10px;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 
-}
-.nav a{
-display: inline-block;
- border-radius: 2px;
- border: 1px solid rgb(154, 205, 50, 0.9);
-
-    padding: 10px;
-}
-.boxes{
-    display: flex;
-    justify-content: space-around;
-}
-.box1{
-    padding-left: 10px;
-}
-.box2{
- 
-    padding-left: 10px;
-}
-hr{
-    height: 200px;
-    width: 5px;
-}
 .menu{
      display: flex;
      justify-content: space-between; 
@@ -124,6 +79,8 @@ hr{
     font-size: x-large;
     font-family:cursive;
     text-decoration: underline;
+    margin-top: 50px;
+    font-size: 30px;
 }
 
 span{
@@ -131,8 +88,8 @@ span{
     text-decoration: underline;
 }
 
-input[type=search] {
-    margin-top: 10px;
+input[type=search]{
+    margin-top: 30px;
     width: 450px;
     height: 25px;
     border: none;
@@ -187,6 +144,12 @@ nav{
     margin-top: 20px;
 }
 
+main{
+    border-top: 5px solid green;
+    border-radius: 30px;
+    min-height: 200px;
+    padding-top: 10px;
+}
 
 .itemcontainer{
     display: flex;
@@ -223,39 +186,17 @@ table{
     width: 200px;
 }
 
-
 input[type="submit"]{
     border: 0;
     color: white;
     background-color: rgb(39, 159, 39);
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    padding :5px;
+    padding: 5px;
     border-radius: 10px;
 }
 
 input[type="submit"]:hover{
     background-color: rgb(130, 173, 45);
-}
-
-.cartcontainer{
-    background-color: yellow;
-    min-width: 50%;
-    min-height: 50%; 
-    position: absolute;
-    z-index: 1;
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    display: none;
-}
-
-.cartspacing{
-    display: flex;
-    align-content: center;
-}
-
-#cartcontainer:target{
-    display: block;   
 }
 
 /* tablet view */
@@ -278,6 +219,10 @@ input[type="submit"]:hover{
         width: 100%;
         gap: 5%;
     } 
+
+    input[type=search]{
+        width: 225px;
+    }
 
     .item{
         width: 75%;

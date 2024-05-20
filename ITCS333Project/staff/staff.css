@@ -1,6 +1,7 @@
 body{
     margin: 0;
     width: 100%;
+    overflow-x: hidden;
 }
 
 /*Staff View Items CSS*/
@@ -24,7 +25,7 @@ a{
 
 .img{
     min-height: 280px;
-    background-image: url(images/limebg.jpeg);
+    background-image: url(../../Design/limebg.jpeg);
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
@@ -36,7 +37,7 @@ header{
     height: 280px;
     width: 100%;
     position: relative;
-    background: linear-gradient(rgb(154, 205, 50, 0.9), rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0));
+    background: linear-gradient(rgb(154, 205, 50, 0.9), rgba(255, 255, 255, 0));
     background-size: cover;
     margin-left: auto;
     margin-right: auto;
@@ -356,10 +357,11 @@ input[type=button]:hover{
     margin: auto;
     width: 90%;
     height: 400px;
-    background: linear-gradient(rgb(154, 205, 50, 0.9), rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0));
-    background-color: white;
+    background: repeating-radial-gradient(rgb(154, 205, 50, 0.9), rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0));
+    background-color: green;
     margin-top: -70px;
     border-radius: 30px;
+    border: 2px solid green;
 }
 
 .editMain p{
@@ -374,7 +376,6 @@ input[type=button]:hover{
 .eboxcontainer{
     display: flex;
     justify-content: center;
-    border: 2px solid forestgreen;
     margin: 10px;
     border-radius: 20px;
 }
@@ -389,6 +390,7 @@ input[type=button]:hover{
     border-radius: 20px;
     background: linear-gradient(rgb(154, 205, 50, 0.9), rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0));
     width: 100%;
+    background-color: white;
 }
 
 .ebox2{
@@ -396,6 +398,7 @@ input[type=button]:hover{
     border-radius: 20px;
     background: linear-gradient(rgb(154, 205, 50, 0.9), rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0));
     width: 100%;
+    background-color: white;
 }
 
 .tr3{
@@ -412,6 +415,13 @@ input[type=button]:hover{
 
 .updatebutton input[type=submit]{
     width: 100px;
+    background-color: white;
+    color: green;
+}
+
+.updatebutton input[type=submit]:hover{
+    background-color: darkgreen;
+    color: white;
 }
 
 /* tablet view */
@@ -420,9 +430,8 @@ input[type=button]:hover{
     html{
         overflow-x: hidden;
         width: 100%;
-       
     }
-    
+
     nav{
         width: 100%;
         gap: 5%;
