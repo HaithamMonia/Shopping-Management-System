@@ -122,12 +122,13 @@ i{
     font-weight: 520;
     row-gap: 20px; /* Spacing between rows */
     column-gap: 20px; /* Spacing between columns */ 
+    position: relative;
    
 }
 
 .staffbox{
     overflow-y:auto;
-    
+    height: 500px;
 }
 
 .st1{
@@ -164,10 +165,12 @@ i{
 }
 
 .submitbox{
-    width: 100%;
-    margin: 20px;
+    width: 80%;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
+    position: absolute;
+    margin-top: -55px; 
+    margin-left: 90px;
 }
 
 input[type="submit"]{
