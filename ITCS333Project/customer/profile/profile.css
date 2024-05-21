@@ -121,10 +121,10 @@ main{
     background-color: white;
     border-radius: 30px;
     height: 200px;
-    width: 40%;
+    min-width: 40%;
+    padding: 10px;
 }
-.leftCard p{
-    
+.leftCard pre{
     color:rgb(0, 0, 0) ;
     font-family:cursive;
     font-size: 20px;
@@ -136,17 +136,18 @@ main{
     background-color: white;
     border-radius: 30px;
     height: 200px;
-    width: 40%;
+    min-width: 40%;
+    padding: 10px;
 }
 
-.rightCard p{
+.rightCard pre{
     color:rgb(0, 0, 0) ;
     font-family:cursive;
     font-size: 20px;
     padding-left: 20px;
 }
 .edit{
-    margin-top: 100px;
+    margin-top: 60px;
     text-align: center;
     
 }
@@ -154,8 +155,8 @@ main{
 input[type="submit"]{
     border: 0;
     width: 100px;
-    color: white;
-    background-color: rgb(39, 159, 39);
+    color: green;
+    background-color: white;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     padding: 5px;
     border-radius: 10px;
@@ -163,6 +164,7 @@ input[type="submit"]{
 
 input[type="submit"]:hover{
     background-color: rgb(130, 173, 45);
+    color: white;
 }
 .head{
     display: flex;
@@ -178,7 +180,8 @@ input[type="submit"]:hover{
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     padding: 5px;
     border-radius: 5px;
-    margin-right: 75px;
+    margin-right: 130px;
+    margin-top: 5px;
 }
 .butto1{
    height: 20px;
@@ -189,15 +192,21 @@ input[type="submit"]:hover{
     padding: 5px;
  }
 .butto1:hover{
-    background-color: rgba(34, 139, 34);
+    background-color: rgb(83, 34, 139);
     border-radius: 20px;
     color: white;
  }
+
  .butto2:hover{
-   
     height: 50px;
     width: 150px;
     background-color: rgba(34, 139, 34);
     border-radius: 20px;
     color: white;
  }
+
+.butto1 input[type=submit]:hover, .butto2 input[type=submit]:hover{
+    background-color: rgb(130, 173, 45);
+    color: white;
+}
+
