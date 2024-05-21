@@ -172,6 +172,7 @@ input[type="submit"]:hover{
 }
 .butto{
     display: flex;
+    z-index: 1;
     justify-content: space-between;
     text-align: center;
     border: 0;
@@ -198,15 +199,10 @@ input[type="submit"]:hover{
  }
 
  .butto2:hover{
-    height: 50px;
-    width: 150px;
     background-color: rgba(34, 139, 34);
     border-radius: 20px;
     color: white;
  }
 
-.butto1 input[type=submit]:hover, .butto2 input[type=submit]:hover{
-    background-color: rgb(130, 173, 45);
-    color: white;
-}
+
 
