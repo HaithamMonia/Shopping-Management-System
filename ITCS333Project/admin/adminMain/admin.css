@@ -22,7 +22,7 @@ a{
 }
 
 .img{
-    min-height: 280px;
+    min-height: 250px;
     background-image: url(../../../Design/limebg.jpeg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -32,7 +32,7 @@ a{
 
 header{
     text-align: center;
-    min-height: 280px;
+    min-height: 250px;
     width: 100%;
     position: relative;
     background: linear-gradient(rgb(154, 205, 50, 0.9), rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0));
@@ -80,30 +80,12 @@ header{
     font-family:cursive;
     text-decoration: underline;
     margin-top: 50px;
-    font-size: 30px;
+    font-size: 40px;
 }
 
 span{
     color: rgb(223, 26, 26);
     text-decoration: underline;
-}
-
-input[type=search] {
-    margin-top: 30px;
-    width: 450px;
-    height: 25px;
-    border: none;
-    border-radius: 25px;
-    padding-left: 10px;
-    box-shadow: 0 0 10px;
-}
-
-input[type=search]:focus{
-    outline: none;
-}
-
-i{
-    font-size: 1rem;
 }
 
 .bottom-box {
@@ -133,8 +115,8 @@ i{
 
 .st1{
     border: 2px solid forestgreen ;
-    height:125px;
-    width:495px;
+    height:100px;
+    min-width:200px;
     border-radius: 30px;
     background-color: white;
     padding:5px;
@@ -175,35 +157,4 @@ i{
 
 .submitbox:hover{
     background-color: rgb(130, 173, 45);
-}
-
-/* tablet view */
-@media(max-width: 768px){
-
-    nav{
-        width: 100%;
-        gap: 5%;
-    }
-
-    .item{
-        width: 25%;
-    }
-}
-
-/* mobile view */
-@media(max-width: 500px){
-
-    nav{
-        width: 100%;
-        gap: 5%;
-    } 
-
-    .item{
-        width: 75%;
-    }
-
-    .staffbox{
-        width: 30px;
-    }
-
 }
