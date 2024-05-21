@@ -149,43 +149,31 @@ i{
     font-size: x-large;
 }
 
-.small-box {
-    background-color: #f0f0f0;
-    padding: 10px;
-    text-align: center;
-    margin: auto;
-    width: 545px;
-    height:30px;
-    border: 2px solid forestgreen ; 
-    border-radius: 30px;
-    font-weight: 520;
-    font-size:x-large;
-    color: forestgreen;
-    background-color: white;
-}
-
 .submitbox{
     width: 80%;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute; 
     display: flex;
-    justify-content: flex-end;
-    position: absolute;
-    margin-top: -55px; 
-    margin-left: 90px;
-}
-
-input[type="submit"]{
     border: 0;
     color: white;
     background-color: rgb(39, 159, 39);
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     padding: 5px;
+    padding-right: 10px;
     border-radius: 10px;
-    width: 200px;
-    height: 40px;
+    width: 150px;
+    height: 30px;
     font-size: 1rem;
+    margin-top: -520px;
+    margin-left: 200px;
 }
 
-input[type="submit"]:hover{
+.submitbox a{
+    display: block;
+}
+
+.submitbox:hover{
     background-color: rgb(130, 173, 45);
 }
 
@@ -214,8 +202,8 @@ input[type="submit"]:hover{
         width: 75%;
     }
 
-    input[type=search]{
-        width: 225px;
-    }   
+    .staffbox{
+        width: 30px;
+    }
 
 }
