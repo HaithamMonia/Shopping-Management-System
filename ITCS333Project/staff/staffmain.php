@@ -8,8 +8,8 @@ $productPrice = "";
 $productDescription = "";  // Corrected variable name
 $productQty = "";  // Corrected variable name
 $isValid = true;
-$formSubmitted =  false;
-require('../cleanInput.php');
+$formSubmitted = false;
+require ('../cleanInput.php');
 
 $insertSuccess = false;  // Flag to check if insert was successful
 
@@ -59,7 +59,7 @@ if (isset($_POST['add'])) {
 
     if ($isValid) {
         try {
-            require('../connection.php');
+            require ('../connection.php');
             $sql = "INSERT INTO product (pid, pname, type, price, description, stock, picture) VALUES (NULL, ?, ?, ?, ?, ?, ?)";
             $stmt = $db->prepare($sql);
 
@@ -73,7 +73,7 @@ if (isset($_POST['add'])) {
 
             if ($stmt->execute()) {
                 $insertSuccess = true;
-    
+
                 // Reset form fields
                 $productName = "";
                 $productType = "";
@@ -157,13 +157,13 @@ if (isset($_POST['add'])) {
                                 </div>
                                 <div class="info box1price">
                                     <td>Price:</td>
-                                    <td><input type="number" min="0" name="pprice"
-                                            value="<?php echo $productPrice; ?>"></br></br></td>
+                                    <td><input type="text" name="pprice" value="<?php echo $productPrice; ?>"></br></br>
+                                    </td>
                                 </div>
                                 <div class="info box1description">
                                     <td>Description:</td>
                                     <td><input type="text" name="pdes"
-                                            value="<?php echo $productDescription  ?>"></br></br></td>
+                                            value="<?php echo $productDescription ?>"></br></br></td>
                                 </div>
                                 <td>Qty:<span class="space"></span>Image:</td>
                                 <td>
@@ -177,7 +177,7 @@ if (isset($_POST['add'])) {
                             </tr>
                             <?php
                             if (!$isValid) {
-                                echo "<tr > <td style = 'color: red; text-align:left;word-wrap: break-word;'>$ErrMessage</td></tr>";
+                                echo "<tr style='width: 70%' > <td style = 'color: red; text-align:left;word-wrap: break-word;'>$ErrMessage</td></tr>";
                             }
                             ?>
 
@@ -189,103 +189,102 @@ if (isset($_POST['add'])) {
 
                     </form>
                 </div>
-
+                <!-- HEEEEEERRRRRRREEEEEEERREREHHVEAIVAEIVHAEVHOIAEVAEVAHNVAEOVOAEVOEVNENBVOVAESBNENBAEANOIBEAVOIAENAEJNVAEJNBAANVEANBPNED -->
             </div>
             <div class="mainbox box2">
                 <div class="box2Title">
                     <p>Active Orders</p>
                 </div>
                 <div class="infobox2">
-                    <div class="subbox2">
-                        <div class="boxheader">
-                            <p>Order ID:</p>
-                        </div>
-                        <div class="boxinfo">
-                            <p>... ...</p>
-                        </div>
-                        <div class="boxfooter">
-                            <p>Status:</p>
-                            <input type="button" value="Ack">
-                            <input type="button" value="Process">
-                            <input type="button" value="Transit">
-                            <input type="button" value="Complete">
-                        </div>
-                    </div>
-                    <div class="subbox2">
-                        <div class="boxheader">
-                            <p>Order ID:</p>
-                        </div>
-                        <div class="boxinfo">
-                            <p>... ...</p>
-                        </div>
-                        <div class="boxfooter">
-                            <p>Status:</p>
-                            <input type="button" value="Ack">
-                            <input type="button" value="Process">
-                            <input type="button" value="Transit">
-                            <input type="button" value="Complete">
-                        </div>
-                    </div>
-                    <div class="subbox2">
-                        <div class="boxheader">
-                            <p>Order ID:</p>
-                        </div>
-                        <div class="boxinfo">
-                            <p>... ...</p>
-                        </div>
-                        <div class="boxfooter">
-                            <p>Status:</p>
-                            <input type="button" value="Ack">
-                            <input type="button" value="Process">
-                            <input type="button" value="Transit">
-                            <input type="button" value="Complete">
-                        </div>
-                    </div>
-                    <div class="subbox2">
-                        <div class="boxheader">
-                            <p>Order ID:</p>
-                        </div>
-                        <div class="boxinfo">
-                            <p>... ...</p>
-                        </div>
-                        <div class="boxfooter">
-                            <p>Status:</p>
-                            <input type="button" value="Ack">
-                            <input type="button" value="Process">
-                            <input type="button" value="Transit">
-                            <input type="button" value="Complete">
-                        </div>
-                    </div>
-                    <div class="subbox2">
-                        <div class="boxheader">
-                            <p>Order ID:</p>
-                        </div>
-                        <div class="boxinfo">
-                            <p>... ...</p>
-                        </div>
-                        <div class="boxfooter">
-                            <p>Status:</p>
-                            <input type="button" value="Ack">
-                            <input type="button" value="Process">
-                            <input type="button" value="Transit">
-                            <input type="button" value="Complete">
-                        </div>
-                    </div>
-                    <div class="subbox2">
-                        <div class="boxheader">
-                            <p>Order ID:</p>
-                        </div>
-                        <div class="boxinfo">
-                            <p>... ...</p>
-                        </div>
-                        <div class="boxfooter">
-                            <p>Status:</p>
-                            <input type="button" value="Ack">
-                            <input type="button" value="Process">
-                            <input type="button" value="Transit">
-                            <input type="button" value="Complete">
-                        </div>
-                    </div>
+
+
+                    <?php
+                    try {
+                        require ('../connection.php');
+                        $sql = "SELECT * FROM orders";
+                        $stmt = $db->prepare($sql);
+                        $status = $stmt->execute();
+
+
+                        $numResponses = $stmt->rowCount();
+                        $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+
+
+
+                        if ($status && $stmt->rowCount() == 0) {
+                            echo "<h3 style = 'color:red; text-align: center; font-weight: 900;'>There are No Active Orders</h3>";
+                        } else {
+                            $stmt2 = $db->prepare("SELECT pname,price,stock FROM product WHERE pid=:id");
+                            $stmt2->bindParam(':id', $productID);
+                            $stmt3 = $db->prepare("SELECT pid,qty,price From orderitem WHERE oid=:orderID");
+                            $stmt3->bindParam(':orderID', $ordID);
+
+                            $counter =0;
+                            foreach ($rows as $r) {
+                                if ($r['status'] != 'Complete') {
+                                    $counter++;
+                                    $ordID = $r['oid'];
+                                    $stmt3->execute();
+                                    $ordItem = $stmt3->fetch(PDO::FETCH_ASSOC);
+
+
+                                    $productID = $ordItem['pid'];
+                                    $stmt2->execute();
+                                    $prow = $stmt2->Fetch(PDO::FETCH_ASSOC);
+                                    ?>
+
+                                    <div class="subbox2">
+                                        <div class="boxheader">
+                                            <p>Order ID: <span class="detailsSpan"><?php echo $r['oid']; ?></span></p>
+                                        </div>
+                                        <div class="boxinfo">
+                                            <p>Name: <span class="detailsSpan"><?php echo $prow['pname']; ?></span>
+                                                <br>price: <span class="detailsSpan"><?php echo $ordItem['price']; ?></span>
+                                                <br>Quantitiy: <span class="detailsSpan"><?php echo $ordItem['qty']; ?></span>
+                                            </p>
+                                        </div>
+                                        <div class="boxfooter">
+                                            <p>Status: <span class="detailsSpan"><?php echo $r['status']; ?></span></p>
+                                            <form method="post">
+
+                                                <input type="submit" name='sb' value="Ack">
+                                                <input type="submit" name='sb' value="Process">
+                                                <input type="submit" name='sb' value="Transit">
+                                                <input type="submit" name='sb' value="Complete">
+                                                <input type="hidden" name="order" value="<?php echo $r['oid']; ?>">
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <?php
+
+
+                                }
+                           
+
+                            }  
+                            if($counter !=0) {
+                             if (isset($_POST['sb']) && isset($_POST['order'])) {
+                                    $state = $_POST['sb'];
+                                    $ordID = $_POST['order'];
+                                    $stmt4 = $db->prepare("UPDATE orders SET status=? WHERE oid=?");
+                                    $stmt4->bindParam(1, $state);
+                                    $stmt4->bindParam(2, $ordID);
+                                    $stmt4->execute();
+                                    unset($state);
+                                    unset($_POST['sb']);
+                                   
+
+                                }
+                            }else{
+                                echo "<h3 style = 'color:red; text-align: center; font-weight: 900;'>There are No Active Orders</h3>";
+                            }
+                            $db = null;
+                        }
+                    } catch (PDOException $e) {
+                        die("ERROR: " . $e->getMessage());
+                    } ?>
+
                 </div>
             </div>
         </div>
@@ -293,16 +292,16 @@ if (isset($_POST['add'])) {
 
     </div>
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             var insertSuccess = <?php echo json_encode($insertSuccess); ?>;
             var formSubmitted = <?php echo json_encode($formSubmitted); ?>;
-            if (formSubmitted&&insertSuccess) {
+            if (formSubmitted && insertSuccess) {
                 alert('Item has been inserted successfully!');
                 document.getElementById('productForm').reset(); // Reset the form fields
-            } else if(formSubmitted&& !insertSuccess) {
+            } else if (formSubmitted && !insertSuccess) {
                 alert('Failed to insert an item');
             }
-            
+
         });
     </script>
 </body>

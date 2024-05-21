@@ -282,7 +282,7 @@ input[type="submit"]:hover{
 .box1table{
     width: 100%;
     border-top: 2px solid forestgreen;
-    border-bottom: 2px solid forestgreen;
+  /*border-bottom: 2px solid forestgreen;*/
     border-radius: 20%;
 
 }
@@ -309,15 +309,13 @@ input[type="submit"]:hover{
     border-radius: 30px;
     padding: 10px;
     overflow-y: auto;
-    height: 220px;
 }
 
 .subbox2{
     border: 1px solid forestgreen;
     border-radius: 20px;
     padding: 10px;
-    width: 45%;
-    height: 100px;
+    width: 50%;
     margin-bottom: 10px;
     display: flex;
     justify-content: space-between;
@@ -483,5 +481,10 @@ input[type=button]:hover{
     padding-right: 60px;
    }
   
+}
+.detailsSpan {
+    color: red;
+    text-decoration: none;
+
 }
 

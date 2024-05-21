@@ -36,54 +36,82 @@
         </div>
 
 
-<main>
-    <div class="head">
-        <p class="mainp"> Profile</p>
-        <div class="butto"> 
-        <a href="profile.html"><div class="butto1"> Information</div></a>
-        <a href=""><div class="butto2"><input type="submit" value="Past orders" ></div> </a>
-    </div>
-
-    </div>
-
-    <div class="cards">
-
-<div class="leftCard">
-    <pre> Username: <input type= "text" name="username" disabled></pre>
-    <pre> Email: <input type= "text" name="username" disabled></pre>
-</div>
-
-<div class="rightCard">
-    <pre> Number:<input type= "text" name="number" disabled></pre>
-    <pre> Address:<input type= "text" name="address" disabled></pre>
-
-</div>
-
-
-    </div>
-    <div class="edit">  <input type="submit" value="Edit info" name="submit"></div>
-</main>
-
-
-
-
-
-
-
-            <div class="cards">
-                <div class="leftcard">
-
+        <main>
+            <div class="head">
+                <p class="mainp"> Profile</p>
+                <div class="butto">
+                    <a href="profile.html" class="b2">
+                        <div class="butto1"> Information</div>
+                    </a>
+                    <a href="" class="b2">
+                        <div class="butto1" onclick="loadDoc2(event)"> Order Status</div>
+                    </a>
+                    <a href="" class="b2">
+                        <div class="butto1" onclick="loadDoc(event)">Past Orders</div>
+                    </a>
                 </div>
 
-                <div class="rightcard">
-                    
-                </div>
             </div>
-                    
-        
-        
+
+            <div class="cards" id="cards">
+
+                <div class="leftCard">
+                    <pre> Username: <input type= "text" name="username" disabled></pre>
+                    <pre> Email: <input type= "text" name="username" disabled></pre>
+                </div>
+
+                <div class="rightCard">
+                    <pre> Number:<input type= "text" name="number" disabled></pre>
+                    <pre> Address:<input type= "text" name="address" disabled></pre>
+
+                </div>
+
+
+            </div>
+            <div class="edit" onclick="loadDoc3(event)"> <input type="submit" value="Edit Info" name="submit"></div>
         </main>
     </div>
-</body>
 
+    <script>
+        function loadDoc(){
+            event.preventDefault();
+            const xHttp = new XMLHttpRequest();
+            xHttp.onreadystatechange = function(){
+                if(this.readyState==4 && this.status==200){
+                    document.getElementById("cards").innerHTML = this.responseText;
+                }
+                document.querySelector(".edit").style = "display: none;"
+            }
+            xHttp.open("GET", "pastorders.html");
+            xHttp.send(null);
+        }
+
+        function loadDoc2(){
+            event.preventDefault();
+            const xHttp = new XMLHttpRequest();
+            xHttp.onreadystatechange = function(){
+                if(this.readyState==4 && this.status==200){
+                    document.getElementById("cards").innerHTML = this.responseText;
+                }
+                document.querySelector(".edit").style = "display: none;"
+            } 
+            xHttp.open("GET", "orderstatus.html");
+            xHttp.send(null);
+        }
+
+        function loadDoc3(){
+            event.preventDefault();
+            const xHttp = new XMLHttpRequest();
+            xHttp.onreadystatechange = function(){
+                if(this.readyState===4 && this.status==200){
+                    document.getElementById("cards").innerHTML = this.responseText;
+                }
+                document.querySelector(".edit").style = "display:none;"
+            }
+            xHttp.open("GET", "editinfo.html");
+            xHttp.send(null);
+        }
+
+    </script>
+</body>
 </html>
