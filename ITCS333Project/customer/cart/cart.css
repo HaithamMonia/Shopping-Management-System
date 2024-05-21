@@ -121,7 +121,6 @@ main{
     flex-wrap: wrap;
     background: linear-gradient(rgb(154, 205, 50, 0.9), rgb(255, 255, 255), rgba(255, 255, 255, 0));
     background-color: white;
-    /* border: 3px solid forestgreen; */
     border-radius: 30px;
     height: 300px;
     width: 40%;
@@ -142,7 +141,6 @@ main{
 .rightCard{
     background: linear-gradient(rgb(154, 205, 50, 0.9), rgb(255, 255, 255), rgba(255, 255, 255, 0));
     background-color: white;
-    /* border: 3px solid forestgreen; */
     border-radius: 30px;
     height: 300px;
     width: 40%;
@@ -194,19 +192,22 @@ main{
     padding: 10px;
     background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.4), rgb(154, 205, 50, 0.9));
     margin-bottom: 15px;
+    height: 200px;
 }
 
 tr{
     display: flex;
     justify-content: center;
     flex-direction: column;
+    height: 100%;
+    width: 100%;
 }
 
 table{
     display: flex;
     justify-content: center;
-    width: 200px;
-    padding-right: 10px;
+    height: 100%;
+    width: 100%;
 }
 
 input[type="submit"]{
