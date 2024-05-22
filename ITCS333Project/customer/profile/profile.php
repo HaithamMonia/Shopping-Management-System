@@ -126,13 +126,14 @@ $db = null;
         function loadDoc(){
             event.preventDefault();
             const xHttp = new XMLHttpRequest();
+            const cusID = "<?php echo $_GET['cusID']; ?>";
             xHttp.onreadystatechange = function(){
                 if(this.readyState==4 && this.status==200){
                     document.getElementById("cards").innerHTML = this.responseText;
                 }
-                document.querySelector(".edit").style = "display: none;"
+                document.querySelector(".edit").style = "display: none;"    
             }
-            xHttp.open("GET", "pastorders.html");
+            xHttp.open("GET", "pastorders.php?cusID="+cusID);
             xHttp.send(null);
         }
 
