@@ -1,5 +1,4 @@
 <?php
-echo $_GET['cusID'];
 if (isset($_GET['cusID'])) {
     $cusID = $_GET['cusID'];
     try {

@@ -25,12 +25,13 @@ if (isset($_GET['cusID'])) {
 </head>
 
 <body>
+    <div class="statuscontainer">
     <?php foreach ($rows as $row) {
         if ($row['status'] == 'Ack')
             $ack = true;
-        if ($row['status'] == 'transit')
+        if ($row['status'] == 'Transit')
             $transit = true;
-        if ($row['status'] == 'process')
+        if ($row['status'] == 'Process')
             $process = true;
     ?>
         <div class="statusmain">
@@ -52,6 +53,7 @@ if (isset($_GET['cusID'])) {
             </form>
         </div>
     <?php } ?>
+    </div>
 </body>
 
 </html>
