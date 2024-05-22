@@ -75,7 +75,7 @@ $db = null;
                         <a href="../cart/cart.html">
                             <div class="mbox"><i class="fa-solid fa-shopping-cart" title="View Cart"></i></div>
                         </a>
-                        <a href="">
+                        <a href="../../login/login.php">
                             <div class="mbox"><b>Logout</b></div>
                         </a>
                     </div>
