@@ -47,7 +47,6 @@ if(isset($_GET['cusID'])){
                      $stmt2= $db->prepare("SELECT oid,pid,qty,price FROM orderitem WHERE oid= :orderID");
                     
                      $stmt3= $db->prepare("SELECT pid,pname FROM product WHERE pid= :productID");
-                    echo  $stmt->rowCount();
                     foreach($orderRows as $order){
                         $stmt2->bindParam(':orderID',$order['oid']);
                         $stmt2->execute();
