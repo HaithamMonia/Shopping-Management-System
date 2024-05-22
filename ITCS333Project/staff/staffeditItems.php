@@ -30,7 +30,7 @@ if(isset($_POST['Update'])){
     $file_extension = strtolower(pathinfo($file_name, PATHINFO_EXTENSION));
 
     // Array of allowed image extensions
-    $allowed_extensions = array('jpg', 'jpeg', 'png', 'gif');
+    $allowed_extensions = array('jpg', 'jpeg', 'png', 'gif','webp');
 
     if(!pnameTest($productName)){
         $isValid = false;

@@ -28,7 +28,7 @@ if (isset($_POST['add'])) {
     $file_extension = strtolower(pathinfo($file_name, PATHINFO_EXTENSION));
 
     // Array of allowed image extensions
-    $allowed_extensions = array('jpg', 'jpeg', 'png', 'gif');
+    $allowed_extensions = array('jpg', 'jpeg', 'png', 'gif','webp');
 
     // Check if the uploaded file has a valid image extension
     if (empty($productName)) {
@@ -129,10 +129,6 @@ if (isset($_POST['add'])) {
                 </div>
                 <div class="title">
                     <h1>Souq<span>BH</span></h1>
-                </div>
-                <div class="search">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                    <input type="search" placeholder="Search for active order">
                 </div>
             </header>
         </div>
@@ -293,18 +289,15 @@ if (isset($_POST['add'])) {
 
     </div>
     <script>
-             document.addEventListener('DOMContentLoaded', function () {
-            const urlParams = new URLSearchParams(window.location.search);
-            const success = urlParams.get('success');
-            if (success === '1') {
-                alert('Item has been Add Successfully!');
-                document.getElementById('productForm').reset();
-            }else{
-                alert('Item has NOT been Add successfully!');
-                document.getElementById('productForm').reset();
-            }
-        });
-    </script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const urlParams = new URLSearchParams(window.location.search);
+        const success = urlParams.get('success');
+        if (success === '1') {
+            alert('Item has been added successfully!');
+            document.getElementById('productForm').reset();
+        }
+    });
+</script>
 </body>
 
 </html>

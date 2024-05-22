@@ -3,15 +3,25 @@ session_start();
 ?>
 <?php
 $wrongCredential = false;
-$email = $ps = "";
+$email = $loginBy = $ps = "";
 require ("../cleanInput.php");
-if (isset($_POST['submit'])) {
 
+if (isset($_POST['submit'])) {
     $email = test_input($_POST['email']);
     $ps = test_input($_POST['ps']);
+    $unReg = "/^[a-zA-Z][a-zA-Z0-9@#_]{2,19}$/";
+    $emailReg = "/^[a-zA-Z0-9.-]+@[a-zA-z0-9-]+\.[a-zA-Z.]{2,5}$/";
+    if(preg_match($unReg,$email)){
+        $loginBy = "username";
+    }else if(preg_match($emailReg,$email)){
+        $loginBy =  "email";
+    }else{
+        $wrongCredential = true;
+    }
+   if(!$wrongCredential){
     try {
         require ("../connection.php");
-        $stmt = $db->prepare("SELECT email, password FROM users WHERE email = :em");
+        $stmt = $db->prepare("SELECT email, password FROM users WHERE $loginBy = :em");
         $stmt->bindParam(':em', $email);
         $stmt->execute();
         $row = $stmt->fetch(); // Fetch a row from the result set
@@ -22,7 +32,7 @@ if (isset($_POST['submit'])) {
             if (password_verify($_POST['ps'], $row['password'])) {
                 // Password is correct
                 $_SESSION['activeUser'] = $_POST['email'];
-                header("location:../newMain/newMain.html");
+                header("location:../customer/customerMain/customer.html");
             } else {
                 // Password is incorrect
                 $wrongCredential = true;
@@ -30,16 +40,6 @@ if (isset($_POST['submit'])) {
             
         }
         
-        // if ($row && password_verify($ps, $row['password'])) {
-            
-        //     echo "17";
-        //     // Password is correct
-        //     $_SESSION['activeUser'] = $email;
-        //     header("location:../newMain/newMain.html");
-        // } else {
-        //     // Password is incorrect
-        //     $wrongCredential = true;
-        // }
         $db = null;
         
 
@@ -47,6 +47,7 @@ if (isset($_POST['submit'])) {
         die("Error: " . $e->getMessage());
     }
 
+}
 }
 ?>
 
@@ -75,7 +76,7 @@ if (isset($_POST['submit'])) {
             <div class="main-subcontainer">
                 <form method="post">
                     <label for="email"> <i class="fa-regular fa-user"></i> </label> &nbsp;
-                    <input type="text" name="email" placeholder="Enter Email" value="<?php echo $email; ?>">
+                    <input type="text" name="email" placeholder="Enter Email or Username" value="<?php echo $email; ?>">
                     <br><br>
                     <label for="password"><i class="fa-solid fa-lock"></i></label> &nbsp;
                     <input type="password" name="ps" placeholder="Enter Password" value="<?php echo $ps; ?>">
@@ -91,7 +92,7 @@ if (isset($_POST['submit'])) {
 
             </div>
 
-            <p>Don't have an account? <a href="register.html">Register</a></p>
+            <p>Don't have an account? <a href="../register/register.php">Register</a></p>
 
 
         </main>

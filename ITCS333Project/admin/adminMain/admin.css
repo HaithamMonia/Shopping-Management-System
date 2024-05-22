@@ -158,3 +158,12 @@ span{
 .submitbox:hover{
     background-color: rgb(130, 173, 45);
 }
+.errorP {
+    color: red; 
+    margin: auto;
+}
+.detailsSpan {
+    color: red;
+    text-decoration: none;
+
+}

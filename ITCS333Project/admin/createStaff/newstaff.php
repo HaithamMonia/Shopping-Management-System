@@ -7,14 +7,14 @@ $psError = false;
 $psConfirmError = false;
 $insertionError = false;
 $un = $email = $phoneNum = $ps = $cps = "";
-require ("../cleanInput.php");
+require ("../../cleanInput.php");
 $confirmPassError = false;
 if (isset($_POST['submit'])) {
     $un = test_input($_POST['username']);
     $email = test_input($_POST['email']);
     $phoneNum = test_input($_POST['phoneNum']);
     $ps = test_input($_POST['password']);
-    $unReg = "/^[a-zA-Z][a-zA-Z0-9@#_]{2,19}$/";
+    $unReg = "/^(?=[a-zA-Z])([a-zA-Z](\s[a-zA-Z])?){3,20}$/";
     $psReg = "/^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@$!%_#*?&])[A-Za-z\d@$!_#%*?&]{8,20}$/";
     $emailReg = "/^[a-zA-Z0-9.-]+@[a-zA-z0-9-]+\.[a-zA-Z.]{2,5}$/";
     $phoneReg = "/^((\+|00)973)?\s?[367][0-9]{7}$/";
@@ -31,16 +31,16 @@ if (isset($_POST['submit'])) {
         $confirmPassError = true;
     } else {
         try {
-            require ("../connection.php");
+            require ("../../connection.php");
             $hps = password_hash($ps, PASSWORD_DEFAULT);
-            $stmt = $db->prepare("INSERT INTO users(username, type, password, email, phoneNum) VALUES(:us, 'customer', :ps, :em, :phone)");
+            $stmt = $db->prepare("INSERT INTO users(username, type, password, email, phoneNum) VALUES(:us, 'staff', :ps, :em, :phone)");
             $stmt->bindParam(':us', $un);
             $stmt->bindParam(':ps', $hps); // Use $hps for password hash
             $stmt->bindParam(':em', $email);
             $stmt->bindParam(':phone', $phoneNum);
             $stmt->execute();
             if ($stmt) {
-                header("location:../login/login.php");
+                header("location:../adminMain/admin.php");
             } else {
                 $insertionError = true;
             }
@@ -64,24 +64,31 @@ if (isset($_POST['submit'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="../reset.css">
-    <link rel="stylesheet" href="register.css">
+    <title>CreateSTAFF</title>
+    <link rel="stylesheet" href="../../reset.css">
+    <link rel="stylesheet" href="newstaff.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 
 <body>
-    <img src="../../Design/limebg.jpeg" alt="background">
+    <img src="../../../Design/limebg.jpeg" alt="background">
     <div class="container">
 
-        <header>
-            <h1>Souq<span>BH</span></h1>
-        </header>
+        <div class="header-container">
+            <header class="editheader">
+                <div class="menu">
+                    <div class="spacing2">
+                    <a href="../adminMain/"><div class="mbox"> <i class="fa-solid fa-house" title="Home"></i></div></a> 
+                    <a href=""><div class="mbox"><b>Logout</b></div></a></div>
+                </div>
+                <div class="title"><h1>Souq<span>BH</span></h1></div>
+            </header>
+        </div>
         <main>
-            <h1>Register</h1>
-
+            <h1>Create Staff</h1>
             <div class="main-subcontainer">
-                <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
+                
+            <form method="post">
                     <label for="text"> <i class="fa-solid fa-user"></i> </label> &nbsp;
                     <input type="text" name="username" placeholder="Enter your name" value="<?php echo $un; ?>">
                     <br><br>
@@ -93,7 +100,7 @@ if (isset($_POST['submit'])) {
                         value="<?php echo $phoneNum; ?>">
                     <br><br>
                     <label for="password"><i class="fa-solid fa-lock"></i></label> &nbsp;
-                    <input type="password" name="password" placeholder="Enter your password" value="<?php echo $PS; ?>">
+                    <input type="password" name="password" placeholder="Enter your password" >
                     <br><br>
                     <label for="password"><i class="fa-solid fa-key"></i></label> &nbsp;
                     <input type="password" name="cPassword" placeholder="Confirm your password">
@@ -102,8 +109,8 @@ if (isset($_POST['submit'])) {
                         <?php
                         if ($unError) {
                             echo "<li style='padding-left: 25px;'><b>- Username:</b></li>";
-                            echo "<li type: 'square' style='padding-left: 55px; color: red;'>* Username must be 3-20 characters.</li>";
-                            echo "<li style='padding-left: 55px; color: red;'>* User name consist only of letters, digits, @_#.</li>";
+                            echo "<li type: 'square' style='padding-left: 55px; color: red;'>* Username must be 8-20 characters.</li>";
+                            echo "<li style='padding-left: 55px; color: red;'>* User name consist only of letters.</li>";
                         }
                         if ($emailError) {
                             echo "<li style='padding-left: 25px;'><b>- Email:</b></li>";
@@ -137,9 +144,9 @@ if (isset($_POST['submit'])) {
 
 
                 </form>
+
             </div>
-            <p>Already have an account? <a href="../login/Login.php">Sign in</a></p>
-            <br>
+
 
 
         </main>
