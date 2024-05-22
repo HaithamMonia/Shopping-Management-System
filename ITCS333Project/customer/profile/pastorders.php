@@ -16,12 +16,7 @@ if(isset($_GET['cusID'])){
                         $orderRows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
                         //orderItem table
-                    
 
-                          
-
-
-                       
                     }catch(PDOException $e){
                         die("Error: ".$e->getMessage());
                     }

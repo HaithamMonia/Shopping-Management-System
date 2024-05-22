@@ -32,7 +32,8 @@ if (isset($_POST['submit'])) {
             if (password_verify($_POST['ps'], $row['password'])) {
                 // Password is correct
                 $_SESSION['activeUser'] = $_POST['email'];
-                header("location:../customer/customerMain/customer.html");
+
+                header("location:../customer/customerMain/customer.php");
             } else {
                 // Password is incorrect
                 $wrongCredential = true;

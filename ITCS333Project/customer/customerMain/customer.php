@@ -1,3 +1,6 @@
+<?php 
+require('../../check_login.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -51,9 +54,10 @@
                     <tr><div class="itemimage"><td><img src="../../../Design/apple.webp" alt="item" width="100" height="100"></td></div>
                         <div class="iteminfo"><td>Apples</br>XXXX BD</td></div>
                         <div class="itemqty"><td>
-                        <form action="" method="POST">
+                        <form action="../cart/addtocart.php" method="POST">
                             Qty:
-                            <input type="number" value="1" min="1" max="20" style="width: 35px;"></br></br>
+                            <input type="number" name="qty" value= "1" min="1" max="20" style="width: 35px;"></br></br>
+                            <input type="hidden" name="pid" value="43">
                            <input type="submit" value="Add to Cart" name="submit">
                         </form>
                         </td></div>  
@@ -67,6 +71,7 @@
                         <form action="" method="POST">
                             Qty:
                             <input type="number" value="1" min="1" max="20" style="width: 35px;"></br></br>
+                            <input type="hidden" name="pid" value="42">
                            <input type="submit" value="Add to Cart" name="submit">
                         </form>
                         </td></div>  
