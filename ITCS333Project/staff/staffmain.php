@@ -277,6 +277,7 @@ if (isset($_POST['add'])) {
 
                                 }
                             }else{
+                                unset($_POST['sb']);
                                 echo "<h3 style = 'color:red; text-align: center; font-weight: 900;'>There are No Active Orders</h3>";
                             }
                             $db = null;
@@ -292,16 +293,16 @@ if (isset($_POST['add'])) {
 
     </div>
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            var insertSuccess = <?php echo json_encode($insertSuccess); ?>;
-            var formSubmitted = <?php echo json_encode($formSubmitted); ?>;
-            if (formSubmitted && insertSuccess) {
-                alert('Item has been inserted successfully!');
-                document.getElementById('productForm').reset(); // Reset the form fields
-            } else if (formSubmitted && !insertSuccess) {
-                alert('Failed to insert an item');
+             document.addEventListener('DOMContentLoaded', function () {
+            const urlParams = new URLSearchParams(window.location.search);
+            const success = urlParams.get('success');
+            if (success === '1') {
+                alert('Item has been Add Successfully!');
+                document.getElementById('productForm').reset();
+            }else{
+                alert('Item has NOT been Add successfully!');
+                document.getElementById('productForm').reset();
             }
-
         });
     </script>
 </body>
