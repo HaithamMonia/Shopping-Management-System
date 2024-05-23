@@ -38,7 +38,7 @@ if (isset($_SESSION['mycart']) && !empty($_SESSION['mycart'])) {
                         <a href="../profile/profile.php">
                             <div class="mbox"><i class="fa-solid fa-user" title="View Profile"></i></div>
                         </a>
-                        <a href="">
+                        <a href="../../login/Login.php">
                             <div class="mbox"><b>Logout</b></div>
                         </a>
                     </div>
