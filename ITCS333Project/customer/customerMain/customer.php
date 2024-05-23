@@ -20,7 +20,7 @@ require('../../check_login.php');
                         <div class="spacing1">
                         <div class="status"><b>Welcome&nbspCustomer!</b></div></div>
                         <div class="spacing2">
-                        <a href="../cart/cart.html"><div class="mbox"><i class="fa-solid fa-shopping-cart" title="View Cart"></i></div></a>
+                        <a href="../cart/cart.php"><div class="mbox"><i class="fa-solid fa-shopping-cart" title="View Cart"></i></div></a>
                         <a href="../profile/profile.php?cusID=25"><div class="mbox"><i class="fa-solid fa-user" title= "View profile"> </i></div></a>
                         <a href="../../login/Login.php"><div class="mbox"><b>Logout</b></div></a></div>
                     </div>
@@ -56,7 +56,7 @@ require('../../check_login.php');
                         <div class="itemqty"><td>
                         <form action="../cart/addtocart.php" method="POST">
                             Qty:
-                            <input type="number" name="qty" value= "1" min="1" max="20" style="width: 35px;"></br></br>
+                            <input type="number" name="qty" value="1"  min="1" max="20" style="width: 35px;"></br></br>
                             <input type="hidden" name="pid" value="43">
                            <input type="submit" value="Add to Cart" name="submit">
                         </form>
@@ -68,16 +68,15 @@ require('../../check_login.php');
                     <tr><div class="itemimage"><td><img src="../../../Design/apple.webp" alt="item" width="100" height="100"></td></div>
                         <div class="iteminfo"><td>Apples</br>XXXX BD</td></div>
                         <div class="itemqty"><td>
-                        <form action="" method="POST">
+                        <form action="../cart/addtocart.php" method="POST">
                             Qty:
-                            <input type="number" value="1" min="1" max="20" style="width: 35px;"></br></br>
+                            <input type="number" name="qty"  min="1" max="20" style="width: 35px;"></br></br>
                             <input type="hidden" name="pid" value="42">
                            <input type="submit" value="Add to Cart" name="submit">
                         </form>
                         </td></div>  
                     </tr>
-                </table>
-                </div>
+                </table></div>
                 <div class="item"><div class="itemimage"><img src="" alt=""></div>
                 <div class="iteminfo"></div>
                 </div>

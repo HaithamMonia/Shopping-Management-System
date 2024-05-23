@@ -109,10 +109,11 @@ main{
 
 .trash{
     display: inline-block;
+    color: gray;
 }
 
 .trash:hover{
-    color: white;
+    color: rgba(255, 0, 0, 0.692);
 }
 
 .leftCard{
