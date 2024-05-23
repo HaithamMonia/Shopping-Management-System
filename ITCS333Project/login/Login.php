@@ -21,7 +21,7 @@ if (isset($_POST['submit'])) {
    if(!$wrongCredential){
     try {
         require ("../connection.php");
-        $stmt = $db->prepare("SELECT ID,email, password FROM users WHERE $loginBy = :em");
+        $stmt = $db->prepare("SELECT ID,email,type,password FROM users WHERE $loginBy = :em");
         $stmt->bindParam(':em', $email);
         $stmt->execute();
         $row = $stmt->fetch(); // Fetch a row from the result set
@@ -32,7 +32,9 @@ if (isset($_POST['submit'])) {
             if (password_verify($_POST['ps'], $row['password'])) {
                 // Password is correct
                
+                //This is user and we want to store type
                 $_SESSION['activeUser'] = $row['ID'];
+                $_SESSION['type'] 
 
                 header("location:../customer/customerMain/customer.php");
             } else {
