@@ -35,7 +35,7 @@ if (isset($_SESSION['mycart']) && !empty($_SESSION['mycart'])) {
                         <a href="../customerMain/customer.php">
                             <div class="mbox"> <i class="fa-solid fa-house" title="Home"></i></div>
                         </a>
-                        <a href="../profile/profile.html">
+                        <a href="../profile/profile.php">
                             <div class="mbox"><i class="fa-solid fa-user" title="View Profile"></i></div>
                         </a>
                         <a href="">
@@ -84,7 +84,7 @@ if (isset($_SESSION['mycart']) && !empty($_SESSION['mycart'])) {
                                                 <form action="processcart.php" method="POST">
                                                     Qty:
                                                     <input type="hidden" name="pid[]" value="<?php echo $pid;?>">
-                                                    <input type="number" name="qty[]" value="<?php echo $qty ?>" min="1" max="<?php echo $productsRows['stock']; ?>" style="width: 35px;"></br></br>
+                                                    <input type="number" name="qty[]" value="<?php echo $qty;?>" min="1" max="<?php echo $productsRows['stock']; ?>" style="width: 35px;"></br></br>
                                                     <div class="trash">
                                                         <a href="../cart/removeitem.php?pid=<?php echo $pid; ?>">
                                                             <i style="color: gray;" class="fa-solid fa-trash"></i>

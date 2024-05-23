@@ -68,9 +68,10 @@ try {
                                 </div>
                                 <div class="itemqty">
                                     <td>
-                                        <form action="" method="POST">
+                                        <form action="../cart/addtocart.php" method="POST">
                                             Qty:
-                                            <input type="number" value="1" min="1" max="<?php echo $product['stock'];?>" style="width: 35px;"><br><br>
+                                            <input type="number" name="qty" value="1" min="1" max="<?php echo $product['stock'];?>" style="width: 35px;"><br><br>
+                                            <input type="hidden" name="pid" value="<?php echo $product['pid'];?>">
                                             <input type="submit" value="Add to Cart" name="submit">
                                         </form>
                                     </td>

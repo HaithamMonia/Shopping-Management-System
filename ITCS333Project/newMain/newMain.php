@@ -31,7 +31,7 @@ try {
                     </div>
                     <div class="spacing2">
                         <a href=""><div class="mbox"><i class="fa-solid fa-shopping-cart" title="View Cart"></i></div></a>
-                        <a href=""><div class="mbox"><b>Login</b></div></a>
+                        <a href="../login/login.php"><div class="mbox"><b>Login</b></div></a>
                     </div>
                 </div>
                 <div class="title"><h1>Souq<span>BH</span></h1></div>
