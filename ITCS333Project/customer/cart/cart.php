@@ -81,7 +81,7 @@ if (isset($_SESSION['mycart']) && !empty($_SESSION['mycart'])) {
                                         </div>
                                         <div class="itemqty">
                                             <td>
-                                                <form action="processcart.php" method="POST">
+                                                <form action="cart.php" method="POST">
                                                     Qty:
                                                     <input type="hidden" name="pid[]" value="<?php echo $pid;?>">
                                                     <input type="number" name="qty[]" value="<?php echo $qty;?>" min="1" max="<?php echo $productsRows['stock']; ?>" style="width: 35px;"></br></br>
@@ -126,11 +126,18 @@ if (isset($_SESSION['mycart']) && !empty($_SESSION['mycart'])) {
                     <p> Cart total: <span style="color:red;"><?php echo $total ?>BD</span></p>
                     <p> Delivery fee:<span style="color:red;"><?php echo $delivery ?>BD</span></p>
                     <p>Total amount:<span style="color:red;"><?php echo $totalAmount ?>BD</span></p>
-                    <div class="placeOrder"> <input type="submit" value="Place Order" name="placeOrder"></div>
+                    <div class="placeOrder" onclick="loadSuccess(event);"> <input type="submit" value="Place Order" name="placeOrder"></div>
                 </div>
             </div>
         </main>
     </div>
+
+    <script>
+        function loadSuccess(){
+            // event.preventDefault();
+            alert("Successfully Placed Order");
+        };
+    </script>
 </body>
 
 </html>

@@ -70,7 +70,7 @@ try {
                                         <form action="" method="POST">
                                             Qty:
                                             <input type="number" value="1" min="1" max="<?php echo $product['stock'];?>" style="width: 35px;"><br><br>
-                                            <input type="submit" value="Add to Cart" name="submit">
+                                            <input type="submit" value="Add to Cart" name="submit" onclick="deny(event)">
                                         </form>
                                     </td>
                                 </div>
@@ -115,6 +115,11 @@ try {
     function loadback(){
         event.preventDefault();
         document.location.href = "newMain.php";
+    }
+
+    function deny(){
+        event.preventDefault();
+        alert("You must be logged in to place orders!");
     }
 </script>
 

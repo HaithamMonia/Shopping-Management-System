@@ -26,11 +26,12 @@ if (isset($_POST['submit'])) {
         $stmt->execute();
         $row = $stmt->fetch(); // Fetch a row from the result set
         if ($row) { // Check if a row was fetched
-            echo $row['password']; // Now it's safe to access $row
-            echo "<br>$_POST[ps]";
+            // echo $row['password']; // Now it's safe to access $row
+            // echo "<br>$_POST[ps]";
             var_dump(password_verify("abc123", $row['password']));
             if (password_verify($_POST['ps'], $row['password'])) {
                 // Password is correct
+               
                 $_SESSION['activeUser'] = $row['ID'];
 
                 header("location:../customer/customerMain/customer.php");
