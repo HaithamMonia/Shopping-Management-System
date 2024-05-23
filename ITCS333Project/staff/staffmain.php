@@ -107,27 +107,24 @@ if (isset($_POST['add'])) {
 
 <body>
     <div class="container">
-        <div class="img"></div>
+        <div class="staffmainimg"></div>
         <div class="header-container">
 
-            <header>
+            <header class="mainheader">
                 <div class="menuMain">
                     <div class="spacing1">
-                        <div class="status"><b>Welcome&nbspStaffName!</b></div>
+                        <div class="status"><b>Welcome&nbspStaff!</b></div>
                     </div>
                     <div class="spacing2">
-                        <a href="staffviewItems.html">
+                        <a href="staffviewItems.php">
                             <div class="mbox"><i class="fa-solid fa-grip" title="View Items"></i></div>
                         </a>
-                        <a href="">
-                            <div class="mbox"><i class="fa-solid fa-user" title="View Profile"></i></div>
-                        </a>
-                        <a href="../login/login.php?logout=1">
+                        <a href="../login/login.php">
                             <div class="mbox"><b>Logout</b></div>
                         </a>
                     </div>
                 </div>
-                <div class="title">
+                <div class="staffmaintitle">
                     <h1>Souq<span>BH</span></h1>
                 </div>
             </header>

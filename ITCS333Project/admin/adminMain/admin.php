@@ -31,10 +31,10 @@ try {
             <header>
                 <div class="menu">
                     <div class="spacing1">
-                        <div class="status"><b>Welcome&nbspStaffName!</b></div>
+                        <div class="status"><b>Welcome&nbspAdmin!</b></div>
                     </div>
                     <div class="spacing2">
-                        <a href="">
+                        <a href="../../login/login.php">
                             <div class="mbox"><b>Logout</b></div>
                         </a>
                     </div>
@@ -52,6 +52,8 @@ try {
 
             <div class="submitbox"><a href="../createStaff/newstaff.php">Create Staff
                 </a></div>
+
+                <div class="staffcontainer">
                 <?php 
                 if($isValid){
                 foreach($rows as $r){
@@ -75,7 +77,7 @@ try {
             </div>
                 <!-- echo "HERE";
              <p class='errorP'>Sorry no Staff found!</p>"; -->
-           <?php }?>
+           <?php }?> </div>
         </div>
 
 </body>

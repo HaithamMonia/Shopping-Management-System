@@ -9,6 +9,26 @@ body{
     position: relative;
 }
 
+input[type=search]{
+    margin-top: 30px;
+    width: 450px;
+    height: 25px;
+    border: none;
+    border-radius: 25px;
+    padding-left: 10px;
+    box-shadow: 0 0 10px;
+}
+
+input[type=search]:focus{
+    outline: none;
+}
+
+i{
+    font-size: 1rem;
+    color: black;
+    padding: 2px;
+}
+
 a{
     text-decoration: none;
     color: white;
@@ -207,6 +227,36 @@ input[type="submit"]:hover{
 
 
 /* Staff Main CSS */
+
+.mainheader{
+    text-align: center;
+    height: 250px;
+    width: 100%;
+    position: relative;
+    background: linear-gradient(rgb(154, 205, 50, 0.9), rgba(255, 255, 255, 0));
+    background-size: cover;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.staffmainimg{
+    min-height: 250px;
+    background-image: url(../../Design/limebg.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    position: absolute;
+}
+
+.staffmaintitle{
+    color: white;
+    font-size: x-large;
+    font-family:cursive;
+    text-decoration: underline;
+    margin-top: 50px;
+    font-size: 40px;
+}
+
 .menuMain{
     display: flex;
     justify-content: space-between; 

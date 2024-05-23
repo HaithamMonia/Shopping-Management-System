@@ -35,7 +35,7 @@ header{
     min-height: 250px;
     width: 100%;
     position: relative;
-    background: linear-gradient(rgb(154, 205, 50, 0.9), rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0));
+    background: linear-gradient(rgb(154, 205, 50, 0.9), rgba(255, 255, 255, 0));
     background-size: cover;
     margin-left: auto;
     margin-right: auto;
@@ -105,12 +105,6 @@ span{
     row-gap: 20px; /* Spacing between rows */
     column-gap: 20px; /* Spacing between columns */ 
     position: relative;
-   
-}
-
-.staffbox{
-    overflow-y:auto;
-    height: 500px;
 }
 
 .st1{
@@ -166,4 +160,9 @@ span{
     color: red;
     text-decoration: none;
 
+}
+
+.staffcontainer{
+    overflow-y: auto;
+    
 }

@@ -30,12 +30,12 @@ function readyForSubmit(){
     }
 
     if(dubEmail){
-        ErrorBox("Email is Taken. Please enter a new Email or <a href='login.php' style='color:blue;'>Login</a>");
+        ErrorBox("Email is Taken. Please enter a new Email or <a href='../login/login.php' style='color:blue;'>Login</a>");
         return false;
     }
 
     if(document.getElementById("pass").value != document.getElementById("cpass").value){
-        ErrorBox("The values under password and confirm password feild do not match");
+        ErrorBox("The values under password and confirm password field do not match");
         return false;
     }
 
@@ -93,9 +93,9 @@ var styl;
 
 function ErrorBox(str){
     styl= document.getElementById("ErrBox").style.cssText;
-    document.getElementById("ErrBox").style.cssText += "visibility: hidden;background-color: rgba(220,244,206,0.95);transition-duration: 1s; color:black;min-height:250px;padding:8px 10px;text-decoration: none;border-radius:3px;border: 2px solid grey;text-align:center;";
+    document.getElementById("ErrBox").style.cssText += "width: 100%; display:block; justify-content:center;visibility: hidden;background-color: rgba(255,255,255,0.85);transition-duration: 1s; color:forestgreen;min-height:250px;padding:8px 10px;text-decoration: none;border-radius:3px;border: none;text-align:center;";
     document.getElementById("ErrBox").style.visibility = "visible";
-    document.getElementById("ErrBox").innerHTML = "<div><br><i class=\"fa-solid fa-circle-xmark\" style='font-size:60px;'></i></div>"+"<br>" + str + "<br><br><br><div style='text-align:center;'><button onClick='CloseIt()' style='background-color: #000;color:#fff;width:100px; padding:8px 0;border-radius: 20px;text-align:center; display: '>Retry</button><br></div>";
+    document.getElementById("ErrBox").innerHTML = "<div><br><i class=\"fa-solid fa-circle-xmark\" style='font-size:60px;'></i></div>"+"<br>" + str + "<br><br><br><div style='text-align:center;'><button onClick='CloseIt()' style='background-color: forestgreen;color:white;width:100px; padding:8px 0;border-radius: 20px;text-align:center; display: '>Retry</button><br></div>";
 }
 
 function CloseIt(){
@@ -119,6 +119,8 @@ if(phpcheck == 1){
     ErrorBox("Wrong Password");
 }else if(phpcheck == 7){
     ErrorBox("Invalid Email or password Format");
+}else if(phpcheck == 8){
+    ErrorBox("Invalid Phone Number");
 }else if(phpcheck >= 9){
     for(var i=1; i<=(phpcheck-10); i++){
         var currentid = "PHPGen";

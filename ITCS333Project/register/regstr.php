@@ -85,53 +85,45 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" 
     integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" 
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Register Page</title>
-    <style>
-        .btn {
-            width: 100%;
-            height: 35px;
-            margin-top: 5px;
-            margin-bottom: 5px;
-            text-align: left;
-            border-radius: 10px;
-            border: 0;
-            padding: 10px;
-            padding: 0;
-            color: white;
-            background-color: #000;
-            text-align: center;
-            font-size: large;
-        }
-    </style>
+    <title>Register</title>
 </head>
 <body>
-    <main class='loginMain'>
-        <form method='post' onSubmit="return readyForSubmit();">
-            <div class='registerMainHead'>SignUp</div><br>
-            <div class='inputs'>
-                UserName<br>
-                <input type='text' name='name' class='inputt' placeholder="Enter your userName" value="<?php echo $name; ?>" id="name" required><br>
-                <?php 
-                    if ($isUserIn) {
-                        echo "The Username is already taken.";
-                    }
-                ?>
-                Email <span id="EmailMsg"></span><br>
-                <input type='text' name='email' class='inputt' placeholder="Enter your Email" value="<?php echo $email; ?>" onkeyup="CheckEmail();" id="email" required><br>
-                <?php 
-                    if ($isEmailIn) {
-                        echo "The Email is already taken.";
-                    }
-                ?>
-                Password<br>
-                <input type='password' name='password' class='inputt' placeholder="Enter your Password" id="pass" required><br>
-                Confirm Password<br>
-                <input type='password' name='cpassword' class='inputt' placeholder="Enter your Password" id="cpass" required><br>
-                
-                <button name="btn" class="btn">Sign UP</button>
-            </div>
-        </form>
-    </main>
+<img src="../../Design/limebg.jpeg" alt="background">
+    <div class="container">
+        <header>
+            <h1>Souq<span>BH</span></h1>
+        </header>
+        <main class='registerMain'>
+            <form method='post' onSubmit="return readyForSubmit();">
+                <div class='registerMainHead'>Register</div><br>
+                <div class='inputs'>
+                    <label for="text"> <i class="fa-solid fa-user"></i> </label> &nbsp;
+                    <input type='text' name='name' class='inputt' placeholder="Enter your username" value="<?php echo $name; ?>" id="name" required><br>
+                    <?php 
+                        if ($isUserIn) {
+                            echo "<p style='color:red;'>The Username is already taken.</p>";
+                        }
+                    ?><br>
+                    <label for="email"> <i class="fa-solid fa-envelope"></i></label> &nbsp;
+                    <input type='text' name='email' class='inputt' placeholder="Enter your e-mail" value="<?php echo $email; ?>" onkeyup="CheckEmail();" id="email" required><br>
+                    <span id="EmailMsg"></span>
+                    <?php 
+                        if ($isEmailIn) {
+                            echo "<p style='color:red;'>The Email is already taken.</p>";
+                        }
+                    ?><br>
+                    <label for="password"><i class="fa-solid fa-lock"></i></label> &nbsp;
+                    <input type='password' name='password' class='inputt' placeholder="Enter your password" id="pass" required><br><br>
+                    <label for="password"><i class="fa-solid fa-key"></i></label> &nbsp;
+                    <input type='password' name='cpassword' class='inputt' placeholder="Confirm your password" id="cpass" required><br><br>
+                    
+                    <button name="btn" class="btn">Sign up</button>
+                </div>
+            </form>
+             <p>Already have an account? <a href="../login/Login.php">Sign in</a></p>
+            <br>
+        </main>
+    </div>
     <?php
         if (isset($_POST['btn'])) {
             if (!$mname) {

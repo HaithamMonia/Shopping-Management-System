@@ -45,7 +45,7 @@ $db = null;
     die("Error: ".$e->getMessage());
 }
 }else{
-    header("location:../customerMain/customer.html");
+    header("location:../customerMain/customer.php");
 }
 
 ?>
@@ -69,10 +69,10 @@ $db = null;
             <header class="editheader">
                 <div class="menu">
                     <div class="spacing2">
-                        <a href="../customerMain/customer.html">
+                        <a href="../customerMain/customer.php">
                             <div class="mbox"> <i class="fa-solid fa-house" title="Home"></i></div>
                         </a>
-                        <a href="../cart/cart.html">
+                        <a href="../cart/cart.php">
                             <div class="mbox"><i class="fa-solid fa-shopping-cart" title="View Cart"></i></div>
                         </a>
                         <a href="../../login/login.php">

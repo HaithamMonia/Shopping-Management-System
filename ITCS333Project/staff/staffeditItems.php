@@ -111,8 +111,7 @@ if(isset($_POST['Update'])){
                 <div class="menu">
                     <div class="spacing2">
                         <a href="staffMain.php"><div class="mbox"> <i class="fa-solid fa-house" title="Home"></i></div></a> 
-                        <a href="staffviewItems.html"><div class="mbox"><i class="fa-solid fa-grip" title="View Items"></i></div></a>
-                        <a href=""><div class="mbox"><i class="fa-solid fa-user" title="View Profile"></i></div></a>
+                        <a href="staffviewItems.php"><div class="mbox"><i class="fa-solid fa-grip" title="View Items"></i></div></a>
                         <a href="../login/Login.php"><div class="mbox"><b>Logout</b></div></a>
                     </div>
                 </div>

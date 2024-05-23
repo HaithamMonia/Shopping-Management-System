@@ -15,9 +15,9 @@
             <header class="editheader">
                 <div class="menu">
                     <div class="spacing2">
-                    <a href="../customerMain/customer.html"><div class="mbox"> <i class="fa-solid fa-house" title="Home"></i></div></a> 
-                    <a href="../profile/profile.html"><div class="mbox"><i class="fa-solid fa-user" title="View Profile"></i></div></a>
-                    <a href=""><div class="mbox"><b>Logout</b></div></a></div>
+                    <a href="../customerMain/customer.php"><div class="mbox"> <i class="fa-solid fa-house" title="Home"></i></div></a> 
+                    <a href="../profile/profile.php"><div class="mbox"><i class="fa-solid fa-user" title="View Profile"></i></div></a>
+                    <a href="../../login/login.php"><div class="mbox"><b>Logout</b></div></a></div>
                 </div>
                 <div class="title"><h1>Souq<span>BH</span></h1></div>
             </header>
