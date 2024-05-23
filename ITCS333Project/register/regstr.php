@@ -1,7 +1,7 @@
 <?php
     $pattern_name = "/^[a-z][a-z\s\d]{1,}$/i";
     $pattern_email = "/^([a-z.0-9_\-+]{1,})@[a-z]{1,}\.[a-z]{1,}$/i";
-    $pattern_password = "/^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])[A-Za-z0-9_#@%\*\-]{8,}$/";
+    $pattern_password = "/^(?=.*[a-z])(?=.*[0-9])[A-Za-z0-9_#@%\*\-]{4,}$/";
 
     $mname = true; $memail = true; $mpassword = true; $ppasword = true;
     $isUserIn = $isEmailIn = false;

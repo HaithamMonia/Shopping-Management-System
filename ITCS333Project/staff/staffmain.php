@@ -1,5 +1,7 @@
 <?php
-session_start();
+require("../check_login.php");
+if(!$_SESSION['type']=='staff')
+    header('../logout.php');
 
 $productName = "";
 $productType = "";

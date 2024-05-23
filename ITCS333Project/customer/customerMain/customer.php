@@ -1,9 +1,10 @@
 <?php 
-require('../../check_login.php');
-
-require('../../connection.php');
+require("../../check_login.php");
+if(!$_SESSION['type']=='customer')
+    header('../../logout.php');
 
 try {
+    require('../../connection.php');
     $category = $db->query("SELECT type FROM product");
     // Fetch all products from the database
     $products = $db->query("SELECT * FROM product")->fetchAll(PDO::FETCH_ASSOC);

@@ -1,5 +1,7 @@
 <?php
-// session_start();
+require("../../check_login.php");
+if(!$_SESSION['type']=='admin')
+    header('../../logout.php');
 $unError = false;
 $emailError = false;
 $phoneError = false;

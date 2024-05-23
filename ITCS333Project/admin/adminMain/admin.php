@@ -1,4 +1,7 @@
 <?php
+require("../../check_login.php");
+if(!$_SESSION['type']=='admin')
+    header('../../logout.php');
 $isValid =  false;
 try {
     require('../../connection.php');
@@ -34,7 +37,7 @@ try {
                         <div class="status"><b>Welcome&nbspAdmin!</b></div>
                     </div>
                     <div class="spacing2">
-                        <a href="../../login/login.php">
+                        <a href="../../logout.php">
                             <div class="mbox"><b>Logout</b></div>
                         </a>
                     </div>

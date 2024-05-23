@@ -1,5 +1,8 @@
 <?php 
+require('../check_login.php');
 require("../cleanInput.php");
+if(!$_SESSION['type']=='staff')
+    header('../logout.php');
 
 $productName = "";
 $productPrice = "";
@@ -49,7 +52,7 @@ if(isset($_POST['Update'])){
         try {
             require('../connection.php');
             // Retrieve the current image filename
-            $sql = "SELECT picture FROM product WHERE pid = ?";
+            $sql = "SELECT picture,pid FROM product WHERE pid = ?";
             $stmt = $db->prepare($sql);
             $stmt->bindParam(1, $productId);
             $productId = $_GET['pid'];
@@ -156,6 +159,7 @@ if(isset($_POST['Update'])){
                     </table>
                 </div>
             </div>
+            <!-- <input type="hidden" name="pid" value=" $_GET[pid];" id=""> -->
             <div class="updatebutton"><input type="submit" value="Update" name="Update"></div>
             </form>
         </div>

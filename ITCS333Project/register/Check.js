@@ -39,7 +39,7 @@ function readyForSubmit(){
         return false;
     }
 
-    ftest = /^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])[A-Za-z0-9_#@%\*\-]{8,}$/;
+    ftest = /^(?=.*[a-z])(?=.*[0-9])[A-Za-z0-9_#@%\*\-]{4,}$/;
     if(!ftest.test(document.getElementById('pass').value)){
         ErrorBox("<div style='display:inline-block;'>Invalid Password: <ul text-align='left'><li>At least 8 Characters</li><li>At least 1 Upper & Lower Case</li><li>At least 1 Digit</li></ul></div>");
         return false;

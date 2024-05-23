@@ -34,9 +34,22 @@ if (isset($_POST['submit'])) {
                
                 //This is user and we want to store type
                 $_SESSION['activeUser'] = $row['ID'];
-                $_SESSION['type'] 
+                $_SESSION['type'] = $row['type'];
+                if($row['type']=='admin'){
+                    header("location:../admin/adminMain/admin.php");
+                    exit();
+                }else if ($row['type']=='staff'){
+                    header("location:../staff/staffmain.php");
+                    exit();
+                }else if ($row['type']=='customer'){
+                    header("location:../customer/customerMain/customer.php"); 
+                    exit();  
+                }else{
+                    header("location:../newMain/newMain.php"); 
+                    exit(); 
+                }
 
-                header("location:../customer/customerMain/customer.php");
+                
             } else {
                 // Password is incorrect
                 $wrongCredential = true;
