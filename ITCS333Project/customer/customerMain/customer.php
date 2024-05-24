@@ -1,5 +1,6 @@
 <?php 
 require("../../check_login.php");
+$us= $_SESSION['activeUser'];
 if(!$_SESSION['type']=='customer')
     header('../../logout.php');
 
@@ -34,7 +35,7 @@ try {
                         <div class="status"><b>Welcome&nbspCustomer!</b></div></div>
                         <div class="spacing2">
                         <a href="../cart/cart.php"><div class="mbox"><i class="fa-solid fa-shopping-cart" title="View Cart"></i></div></a>
-                        <a href="../profile/profile.php?cusID=25"><div class="mbox"><i class="fa-solid fa-user" title= "View profile"> </i></div></a>
+                        <a href="../profile/profile.php?cusID=<?php echo $us?>"><div class="mbox"><i class="fa-solid fa-user" title= "View profile"> </i></div></a>
                         <a href="../../login/Login.php"><div class="mbox"><b>Logout</b></div></a></div>
                     </div>
                     <div class="title"><h1>Souq<span>BH</span></h1></div>
